@@ -1,25 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp">
 
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8"/>
   <title>Ionic App</title>
 
-  <base href="/" />
+  <base href="/"/>
 
-  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0"/>
+<!--  <meta name="format-detection" content="telephone=no"/>-->
+  <!--  <meta name="msapplication-tap-highlight" content="no"/>-->
 
-  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png"/>
 
-  <!-- add to homescreen for ios -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<!--  &lt;!&ndash; add to homescreen for ios &ndash;&gt;-->
+  <!--  <meta name="apple-mobile-web-app-capable" content="yes"/>-->
+  <!--  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>-->
 </head>
 
-<body>
-  <app-root></app-root>
+<body style="margin: 0px; overflow: hidden;">
+<!--  ARライブラリーを追加-->
+<script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.0/aframe/build/aframe-ar.js"></script>
+<!--<app-root></app-root>-->
+<a-scene embedded arjs="debugUIEnabled:false;">
+  <a-marker preset="hiro">
+    <a-text value="Testing AR!!!" position=" 0 0 1" align="center" rotation="-90 0 0"
+            color="#7993ff">
+    </a-text>
+  </a-marker>
+  <a-entity camera></a-entity>
+</a-scene>
 </body>
+
 
 </html>

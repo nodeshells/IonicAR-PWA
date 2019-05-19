@@ -1,0 +1,25 @@
+<!--<ion-header style="position: fixed; z-index: 300;">-->
+<!--  <ion-toolbar>-->
+<!--    <ion-title>AR-DEMO</ion-title>-->
+<!--    <ion-buttons slot="end">-->
+<!--      <ion-button routerLink="">-->
+<!--        <ion-icon name="close" slot="icon-only"></ion-icon>-->
+<!--      </ion-button>-->
+<!--    </ion-buttons>-->
+<!--  </ion-toolbar>-->
+<!--</ion-header>-->
+<div>
+  <ion-buttons style="position: fixed; right: 0; top:0;">
+    <ion-button routerLink="">
+      <ion-icon name="close" slot="icon-only"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <a-scene embedded arjs="debugUIEnabled:false;">
+    <a-marker preset="hiro">
+      <a-text value="Testing AR!!!" position=" 0 0 1" align="center" rotation="-90 0 0"
+              color="#7993ff">
+      </a-text>
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+</div>
